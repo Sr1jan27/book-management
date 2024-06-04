@@ -14,6 +14,12 @@ export class BookListComponent {
 
   }
 
-  
+  addBook(id: string, title: string, author: string){
+    this.store.dispatch(AddBook({id, title, author}));
+  }
+
+  removeBook(bookId: string){
+    this.store.dispatch(RemoveBook({bookId}));
+  }
 
 }
